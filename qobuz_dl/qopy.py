@@ -32,14 +32,12 @@ class Client:
             {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
                 "X-App-Id": self.id,
-                "Content-Type": "application/json;charset=UTF-8"
-
             }
         )
         self.base = "https://www.qobuz.com/api.json/0.2/"
         self.sec = None
         self.auth(email, pwd)
-        self.cfg_setup()
+        # self.cfg_setup()
 
     def api_call(self, epoint, **kwargs):
         if epoint == "user/login":
